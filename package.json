@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" --",
+    "build": "npm run build-only",
     "preview": "vite preview",
     "prepare": "cypress install",
     "test:e2e": "start-server-and-test preview http://localhost:4173 'cypress run --e2e'",
@@ -25,6 +25,7 @@
     "@cypress/vue": "^6.0.2",
     "@tsconfig/node22": "^22.0.1",
     "@types/cypress": "^0.1.6",
+    "@types/jest": "^30.0.0",
     "@types/node": "^22.14.0",
     "@types/vue-router": "^2.0.0",
     "@vitejs/plugin-vue": "^5.2.3",

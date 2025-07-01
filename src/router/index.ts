@@ -19,7 +19,7 @@ const router = createRouter({
 
       props: route => ({
         id: route.params.id,
-        score: "0" // your default or custom value
+        score: "0"
       })
     },
     {
