@@ -13,6 +13,18 @@
         ]
     },
     {
+        "declaration": "Sort an array of chars alphabetically.",
+        "type": "string[]",
+        "functionHeader": "function sortCharsAlphabetically(input) {",
+        "solution": "function sortCharsAlphabetically(input) {\n  return input.sort((a, b) => a.localeCompare(b));\n}",
+        "timeToCode": 150,
+        "testCases": [
+            { "input": ["d", "a", "c", "b"], "expected": ["a", "b", "c", "d"] },
+            { "input": ["z", "y", "x"], "expected": ["x", "y", "z"] },
+            { "input": [], "expected": [] }
+        ]
+    },
+    {
         "declaration": "Checks if a string is a palindrome, ignoring case and non-alphanumeric characters.",
         "type": "string",
         "functionHeader": "function isStrictPalindrome(input) {",
