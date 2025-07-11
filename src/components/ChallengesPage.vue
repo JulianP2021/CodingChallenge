@@ -91,13 +91,20 @@ function onSubmit() {
         } catch (e) {
             result = e;
         }
-        if (result != testCase.expected) {
-            const possible_error = `Not what we expected: Expected ${testCase.expected} but got ${result} based on input ${testCase.input}`
-            if (possible_error.length < 200) {
-                error.value = possible_error;
-            } else {
-                error.value = "Error to long to print";
-            }
+        if (typeof result === 'object' && result !== null) {
+            result = JSON.stringify(result);
+        }
+        let expectedResult: string | number | boolean = "";
+
+        if (Array.isArray(testCase.expected)) {
+            expectedResult = JSON.stringify(testCase.expected);
+        } else {
+            expectedResult = testCase.expected;
+        }
+
+        if (result != expectedResult) {
+            const possible_error = `Not what we expected: Expected ${expectedResult} but got ${result} based on input ${testCase.input}`
+            error.value = possible_error;
             return;
         }
     }
