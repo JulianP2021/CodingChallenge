@@ -178,19 +178,4 @@ pre#js-declaration {
     background: #938f8f;
     width: calc(2 * fit-content(100%));
 }
-
-button {
-    padding: 14px 36px;
-    font-size: 0.7rem;
-    color: #fff;
-    background: #3a86ff;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-
-button:hover {
-    background: #265d97;
-}
 </style>

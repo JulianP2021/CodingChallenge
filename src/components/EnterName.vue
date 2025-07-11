@@ -3,6 +3,7 @@
         <p>Your score: {{ score }}</p>
         <form @submit.prevent="submitName">
             <input v-model="name" type="text" placeholder="Enter your name" required />
+            <br>
             <button type="submit">Submit</button>
         </form>
     </div>
